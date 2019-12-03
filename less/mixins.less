@@ -1,1 +1,26 @@
 // Mixins in here
+
+.button-style(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:hover {
+        background-color: darken(@background, 25%);
+        border-color: darken(@border, 25%);
+    }
+}
+
+.button-size(@padding; @size; @height; @radius) {
+    padding: @padding;
+    font-size: @size;
+    line-height: @height;
+    border-radius: @radius;
+}
+
+.flexible(@direction, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
